@@ -1,0 +1,196 @@
+@import
+url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap');
+
+/* colors and images */
+:root {
+    --nav-links-color: #fff;
+    --button-hover-color: #878584;
+    --backoffice-menu-bg: #343a40;
+    --table-head-bg: #e9ecef;
+    --nav-link-hover-color: #f79800;
+    --footer-color: #e3e3e3;
+    --dark-layer: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6));
+    --edit-button-color: #ffa207;
+    --delete-button-color: #dc3545;
+    --pagination-active-bg: #007bff;
+    --bg-img-header: url(../_imagens/img_bg_backoffice_usuario.jpg);
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+
+a {
+    text-decoration: none;
+    color: var(--nav-links-color);
+    
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    color: var(--nav-links-color);
+    background-image: var(--dark-layer), var(--bg-img-header);
+    background-size: cover;
+    background-position: center;
+    height: 35vh;
+    padding: 2% 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header h1 {
+    font-size: 1.2rem;
+}
+
+header h2 {
+    font-size: 2rem;
+}
+
+/* navegacao do menu */
+.logo-dinnerdash {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-dinnerdash .perfil a:hover {
+    color: var(--nav-link-hover-color);
+}
+
+.perfil {
+    display: flex;
+    column-gap: 2rem;
+}
+
+main {
+    width: 100%;
+    flex: 1;
+}
+
+.pedidos {
+    background-color: var(--backoffice-menu-bg);
+    color: var(--footer-color);
+    font-size: .7rem;
+    padding-left: 3%;
+}
+
+.pedidos ul {
+    padding: 1rem;
+}
+
+.pedidos ul li{
+    display: inline-block;
+    justify-content: space-between;
+    padding-left: 1%;
+}
+
+footer {
+    padding: .8vh;
+    background-color: var(--footer-color);
+    display: flex;
+    justify-content: space-between;
+}
+
+span {
+    margin: 0 2% 0 2%;
+}
+
+.content-table {
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    width: 55vw;
+    border-collapse:collapse;
+}
+
+table th {
+    background-color: var(--table-head-bg);
+    padding: 1%;
+    width: 28%;
+}
+
+table thead th {
+    text-align: left;
+}
+
+td {
+    padding: 0.6rem;
+    text-align: left;
+}
+
+.editar-button {
+    color: var(--edit-button-color);
+    background: none;
+    font-weight: bold;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+.excluir-button {
+    color: var(--delete-button-color);
+    background: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    color: var(--button-hover-color);
+}
+
+.pagination {
+    display: flex;
+    margin: 1rem auto;
+
+}
+
+.pagination button {
+    color: black;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--footer-color);
+
+}
+
+.prev-button{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.next-button {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.prev-button:hover {
+    background-color: var(--table-head-bg);
+}
+
+.next-button:hover {
+    background-color: var(--table-head-bg);
+}
+
+.pagination .active {
+    color: white;
+    background-color: var(--pagination-active-bg);
+    border: 1px solid var(--pagination-active-bg)
+}
